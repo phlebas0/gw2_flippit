@@ -31,22 +31,17 @@ The 0.85 factor accounts for the 15% Trading Post fee:
   5%  listing fee (charged when you post the listing)
   10% sales tax   (deducted from proceeds when sold)
 
-Buy and sell orders are matched using FIFO (first in, first out).
-The GW2 API does not expose which buy order funded which sale, so this
-is an approximation. Partial lots are split automatically.
+Buy and sell orders are matched using FIFO (first in, first out). The GW2 API does not expose which buy order funded which sale, so this is an approximation. Partial lots are split automatically.
 
 Limitations
 -----------
 - FIFO is an approximation, and not always (or often) accurate.
-- Cancelled orders and expired listings are not returned by the GW2 API
-  and cannot be tracked. Fees lost to cancellations will not appear.
-- The GW2 API retains approximately 90 days of transaction history.
-  Transactions older than this will not appear. Sync regularly to avoid
-  buy orders ageing out before their matching sale is recorded.
+- Cancelled orders and expired listings are not returned by the GW2 API and cannot be tracked. Fees lost to cancellations will not appear.
+- The GW2 API retains approximately 90 days of transaction history. Transactions older than this will not appear. Sync regularly to avoid buy orders ageing out before their matching sale is recorded.
 - Only completed transactions are shown. Open orders are not included.
 
 Files
 -----
-gw2_flip_tracker.py   the application
-gw2_flips.db          transaction cache and matched flips (SQLite, auto-created)
-gw2_config.json       saved API key (auto-created)
+- gw2_flip_tracker.py: the application
+- gw2_flips.db: transaction cache and matched flips (SQLite, auto-created)
+- gw2_config.json: saved API key (auto-created)
