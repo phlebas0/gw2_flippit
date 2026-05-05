@@ -19,9 +19,8 @@ Setup
 Usage
 -----
 - Sync Now: Fetches your latest transaction history from the GW2 API. Item names are cached locally so only new ones are resolved.
- - Filters: Filter the table by columns.
- - Export CSV: Exports the current filtered view to a CSV file.
- - Columns: Item, quantity, buy price, sell price, net profit, buy date, sell date. Rows are green if profitable, red if not.
+- Export CSV: Exports the current filtered view to a CSV file.
+- - Columns: Item, quantity, buy price, sell price, net profit, buy date, sell date. Rows are green if profitable, red if not.
 
 How profit is calculated
 ------------------------
